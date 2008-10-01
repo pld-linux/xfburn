@@ -9,11 +9,11 @@ License:	GPL v2
 Group:		Applications
 Source0:	http://goodies.xfce.org/releases/xfburn/%{name}-%{version}.tar.gz
 # Source0-md5:	b70219d92c6cdbe0c89c8ae073395ea4
-URL:		http://goodies.xfce.org/projects/applications/xfburn/	
+URL:		http://goodies.xfce.org/projects/applications/xfburn/
 BuildRequires:	libburn-devel
+BuildRequires:	libexo-devel
 BuildRequires:	libisofs-devel
 BuildRequires:	libxfcegui4-devel
-BuildRequires:	libexo-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -25,10 +25,11 @@ next release.
 
 %description -l pl.UTF-8
 Xfburn to proste narzędzie służące do wypalania płyt CD/DVD
-wykorzystujące biblioteki libburnia. Obsługuje wymazywanie CD/DVD-RW,
-tworzenie obrazów płyt jak również przygotowywanie własnych zestawów danych.
-Program znajduje się obecnie w fazie gwałtownego rozwoju, obsługa
-płyt audio CD zostanie dodana w kolejnej wersji.
+wykorzystujące biblioteki libburnia. Obsługuje wymazywanie
+CD/DVD-RW, tworzenie obrazów płyt jak również przygotowywanie
+własnych zestawów danych. Program znajduje się obecnie w fazie
+gwałtownego rozwoju, obsługa płyt audio CD zostanie dodana w
+kolejnej wersji.
 
 %prep
 %setup -q
