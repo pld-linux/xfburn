@@ -9,17 +9,20 @@ Source0:	http://goodies.xfce.org/releases/xfburn/%{name}-%{version}.tar.gz
 # Source0-md5:	b70219d92c6cdbe0c89c8ae073395ea4
 Patch0:		%{name}-po.patch
 URL:		http://goodies.xfce.org/projects/applications/xfburn/
-BuildRequires:	libburn-devel
-BuildRequires:	libexo-devel
-BuildRequires:	libisofs-devel
-BuildRequires:	libxfcegui4-devel
-BuildRequires:  rpmbuild(find_lang) >= 1.23
-BuildRequires:  rpmbuild(macros) >= 1.311
-BuildRequires:  hal-devel >= 0.5
+# Thunar-vfs >= 0.3.0 ?
+BuildRequires:	dbus-glib-devel >= 0.34
+BuildRequires:	glib2-devel >= 1:2.6.0
+BuildRequires:	gtk+2-devel >= 2:2.10.0
+BuildRequires:	hal-devel >= 0.5.7
+BuildRequires:	libburn-devel >= 0.3.0
+BuildRequires:	libexo-devel >= 0.3.0
+BuildRequires:	libisofs-devel >= 0.6.2
+BuildRequires:	libxfcegui4-devel >= 4.4.0
+BuildRequires:	pkgconfig
+BuildRequires:	rpmbuild(macros) >= 1.311
 Requires(post,postun):  desktop-file-utils
 Requires(post,postun):  gtk+2
 Requires(post,postun):  hicolor-icon-theme
-Requires(post):   	GConf2
 Requires:       hal >= 0.5
 Suggests:       dvd+rw-tools
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -63,12 +66,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 %update_desktop_database_post
-%update_mime_database
 %update_icon_cache hicolor
 
 %postun
 %update_desktop_database_postun
-%update_mime_database
 %update_icon_cache hicolor
 
 %files -f %{name}.lang
