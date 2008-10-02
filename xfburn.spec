@@ -23,7 +23,7 @@ BuildRequires:	rpmbuild(macros) >= 1.311
 Requires(post,postun):  desktop-file-utils
 Requires(post,postun):  gtk+2
 Requires(post,postun):  hicolor-icon-theme
-Requires:       hal >= 0.5
+Requires:       hal >= 0.5.7
 Suggests:       dvd+rw-tools
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
