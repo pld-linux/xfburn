@@ -1,15 +1,14 @@
 Summary:	Xfburn - a simple CD/DVD burning tool
 Summary(pl.UTF-8):	Xfburn - proste narzędzie do wypalania CD/DVD
 Name:		xfburn
-Version:	0.3.2
-Release:	0.3
+Version:	0.4.0
+Release:	0.1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://goodies.xfce.org/releases/xfburn/%{name}-%{version}.tar.gz
-# Source0-md5:	b70219d92c6cdbe0c89c8ae073395ea4
+Source0:	http://goodies.xfce.org/releases/xfburn/%{name}-%{version}.tar.bz2
+# Source0-md5:	621a59415138c191c25e3d30a5ed5742
 Patch0:		%{name}-po.patch
 URL:		http://goodies.xfce.org/projects/applications/xfburn/
-# Thunar-vfs >= 0.3.0 ?
 BuildRequires:	dbus-glib-devel >= 0.34
 BuildRequires:	glib2-devel >= 1:2.6.0
 BuildRequires:	gtk+2-devel >= 2:2.10.0
@@ -24,6 +23,7 @@ Requires(post,postun):  desktop-file-utils
 Requires(post,postun):  gtk+2
 Requires(post,postun):  hicolor-icon-theme
 Requires:       hal >= 0.5.7
+Requires:	Thunar >= 0.9.3
 Suggests:       dvd+rw-tools
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -79,4 +79,5 @@ rm -rf $RPM_BUILD_ROOT
 %{_iconsdir}/hicolor/*/stock/media/*.png
 %{_iconsdir}/hicolor/*/stock/media/*.svg
 %{_datadir}/%{name}
+%{_datadir}/Thunar/sendto/thunar-sendto-%{name}.desktop
 %{_desktopdir}/%{name}.desktop
