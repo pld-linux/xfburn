@@ -1,19 +1,19 @@
 Summary:	Xfburn - a simple CD/DVD burning tool
 Summary(pl.UTF-8):	Xfburn - proste narzędzie do wypalania CD/DVD
 Name:		xfburn
-Version:	0.4.0
+Version:	0.4.1
 Release:	0.1
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://goodies.xfce.org/releases/xfburn/%{name}-%{version}.tar.bz2
-# Source0-md5:	621a59415138c191c25e3d30a5ed5742
+# Source0-md5:	f5ed76149fd348504d4a75830b4996dc
 Patch0:		%{name}-po.patch
 URL:		http://goodies.xfce.org/projects/applications/xfburn/
 BuildRequires:	dbus-glib-devel >= 0.34
 BuildRequires:	glib2-devel >= 1:2.6.0
 BuildRequires:	gtk+2-devel >= 2:2.10.0
 BuildRequires:	hal-devel >= 0.5.7
-BuildRequires:	libburn-devel >= 0.3.0
+BuildRequires:	libburn-devel >= 0.5.6
 BuildRequires:	libexo-devel >= 0.3.0
 BuildRequires:	libisofs-devel >= 0.6.2
 BuildRequires:	libxfcegui4-devel >= 4.4.0
@@ -81,3 +81,4 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/%{name}
 %{_datadir}/Thunar/sendto/thunar-sendto-%{name}.desktop
 %{_desktopdir}/%{name}.desktop
+%{_mandir}/man1/xfburn.1*
