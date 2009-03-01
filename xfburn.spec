@@ -2,29 +2,31 @@ Summary:	Xfburn - a simple CD/DVD burning tool
 Summary(pl.UTF-8):	Xfburn - proste narzędzie do wypalania CD/DVD
 Name:		xfburn
 Version:	0.4.1
-Release:	0.1
+Release:	1
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://goodies.xfce.org/releases/xfburn/%{name}-%{version}.tar.bz2
 # Source0-md5:	f5ed76149fd348504d4a75830b4996dc
 Patch0:		%{name}-po.patch
 URL:		http://goodies.xfce.org/projects/applications/xfburn/
+BuildRequires:	Thunar-devel >= 0.9.3
 BuildRequires:	dbus-glib-devel >= 0.34
+BuildRequires:	exo-devel >= 0.3.0
 BuildRequires:	glib2-devel >= 1:2.6.0
+BuildRequires:	gstreamer-plugins-base-devel >= 0.10.2
 BuildRequires:	gtk+2-devel >= 2:2.10.0
 BuildRequires:	hal-devel >= 0.5.7
 BuildRequires:	libburn-devel >= 0.5.6
-BuildRequires:	libexo-devel >= 0.3.0
 BuildRequires:	libisofs-devel >= 0.6.2
 BuildRequires:	libxfcegui4-devel >= 4.4.0
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.311
-Requires(post,postun):  desktop-file-utils
-Requires(post,postun):  gtk+2
-Requires(post,postun):  hicolor-icon-theme
-Requires:       hal >= 0.5.7
+Requires(post,postun):	desktop-file-utils
+Requires(post,postun):	gtk+2
+Requires(post,postun):	hicolor-icon-theme
 Requires:	Thunar >= 0.9.3
-Suggests:       dvd+rw-tools
+Requires:	hal >= 0.5.7
+Suggests:	dvd+rw-tools
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -50,7 +52,7 @@ obsługa płyt audio CD zostanie dodana w kolejnej wersji.
 mv -f po/{pt_PT.po,pt.po}
 mv -f po/{nb_NO.po,nb.po}
 
-%configure 
+%configure
 %{__make}
 
 %install
