@@ -1,7 +1,6 @@
-diff -burNp xfburn-0.4.0/po/LINGUAS xfburn-0.4.0-new/po/LINGUAS
---- xfburn-0.4.0/po/LINGUAS	2008-11-20 08:15:12.000000000 +0100
-+++ xfburn-0.4.0-new/po/LINGUAS	2008-12-29 16:53:25.139176105 +0100
+--- xfburn-0.4.2/po/LINGUAS~	2009-07-16 16:06:30.000000000 +0200
++++ xfburn-0.4.2/po/LINGUAS	2009-11-22 11:03:44.814851171 +0100
 @@ -1,2 +1,2 @@
  # set of available languages (in alphabetic order)
--ar ca cs da de dz el en_GB es et eu fi fr gl he hu id it ja ko lt lv nb_NO nl pa pl pt_BR pt_PT ru sq sv tr uk ur zh_CN zh_TW
-+ar ca cs da de dz el en_GB es et eu fi fr gl he hu id it ja ko lt lv nb nl pa pl pt_BR pt ru sq sv tr uk ur zh_CN zh_TW
+-ar ca cs da de dz el en_GB es et eu fi fr gl he hu id it ja kk ko lt lv nb nl pa pl pt pt_BR ru sq sv tr uk ur ur_PK zh_CN zh_TW
++ar ca cs da de dz el en_GB es et eu fi fr gl he hu id it ja kk ko lt lv nb nl pa pl pt pt_BR ru sq sv tr uk ur zh_CN zh_TW
