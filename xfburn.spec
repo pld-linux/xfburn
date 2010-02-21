@@ -12,10 +12,12 @@ URL:		http://goodies.xfce.org/projects/applications/xfburn/
 BuildRequires:	Thunar-devel >= 0.9.3
 BuildRequires:	dbus-glib-devel >= 0.34
 BuildRequires:	exo-devel >= 0.3.0
+BuildRequires:	gettext-devel
 BuildRequires:	glib2-devel >= 1:2.6.0
 BuildRequires:	gstreamer-plugins-base-devel >= 0.10.2
 BuildRequires:	gtk+2-devel >= 2:2.10.0
 BuildRequires:	hal-devel >= 0.5.7
+BuildRequires:	intltool
 BuildRequires:	libburn-devel >= 0.5.6
 BuildRequires:	libisofs-devel >= 0.6.2
 BuildRequires:	libxfcegui4-devel >= 4.4.0
