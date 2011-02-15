@@ -22,12 +22,13 @@ BuildRequires:	libburn-devel >= 0.5.6
 BuildRequires:	libisofs-devel >= 0.6.2
 BuildRequires:	libxfcegui4-devel >= 4.4.0
 BuildRequires:	pkgconfig
-BuildRequires:	rpmbuild(macros) >= 1.311
+BuildRequires:	rpmbuild(macros) >= 1.601
+BuildRequires:	thunar-vfs-devel
 Requires(post,postun):	desktop-file-utils
-Requires(post,postun):	gtk-update-icon-cache
-Requires(post,postun):	hicolor-icon-theme
 Requires:	Thunar >= 0.9.3
+Requires:	gtk-update-icon-cache
 Requires:	hal >= 0.5.7
+Requires:	hicolor-icon-theme
 Suggests:	dvd+rw-tools
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
