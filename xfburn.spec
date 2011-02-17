@@ -2,7 +2,7 @@ Summary:	Xfburn - a simple CD/DVD burning tool
 Summary(pl.UTF-8):	Xfburn - proste narzędzie do wypalania CD/DVD
 Name:		xfburn
 Version:	0.4.3
-Release:	2
+Release:	3
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://archive.xfce.org/src/apps/xfburn/0.4/%{name}-%{version}.tar.bz2
