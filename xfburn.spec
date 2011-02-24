@@ -2,14 +2,17 @@ Summary:	Xfburn - a simple CD/DVD burning tool
 Summary(pl.UTF-8):	Xfburn - proste narzędzie do wypalania CD/DVD
 Name:		xfburn
 Version:	0.4.3
-Release:	3
+Release:	3.1
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://archive.xfce.org/src/apps/xfburn/0.4/%{name}-%{version}.tar.bz2
 # Source0-md5:	147cdc2d909e751125be16103b8dc81f
 Patch0:		%{name}-po.patch
+Patch1:		%{name}-gio.patch
 URL:		http://goodies.xfce.org/projects/applications/xfburn/
 BuildRequires:	Thunar-devel >= 0.9.3
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	dbus-glib-devel >= 0.34
 BuildRequires:	exo-devel >= 0.3.0
 BuildRequires:	gettext-devel
@@ -20,10 +23,10 @@ BuildRequires:	hal-devel >= 0.5.7
 BuildRequires:	intltool
 BuildRequires:	libburn-devel >= 0.5.6
 BuildRequires:	libisofs-devel >= 0.6.2
+BuildRequires:	libtool
 BuildRequires:	libxfcegui4-devel >= 4.4.0
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.601
-BuildRequires:	thunar-vfs-devel
 Requires(post,postun):	desktop-file-utils
 Requires:	Thunar >= 0.9.3
 Requires:	gtk-update-icon-cache
@@ -49,12 +52,19 @@ obsługa płyt audio CD zostanie dodana w kolejnej wersji.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
-%build
 # unsupported Urdu Pakistan dialect
 %{__rm} po/ur_PK.po
 
+%build
+%{__libtoolize}
+%{__aclocal}
+%{__autoconf}
+%{__autoheader}
+%{__automake}
 %configure
+
 %{__make}
 
 %install
