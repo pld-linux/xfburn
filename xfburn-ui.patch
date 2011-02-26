@@ -164,6 +164,16 @@ diff -ur xfburn-0.4.3/xfburn/xfburn-blank-dialog.c xfburn-0.4.3-4ui/xfburn/xfbur
    gtk_widget_show (button);
    gtk_dialog_add_action_widget (GTK_DIALOG (obj), button, GTK_RESPONSE_OK);
    GTK_WIDGET_SET_FLAGS (button, GTK_CAN_DEFAULT);
+--- xfburn-0.4.3/xfburn/xfburn-blank-dialog.h~	2009-10-24 23:18:10.000000000 +0200
++++ xfburn-0.4.3/xfburn/xfburn-blank-dialog.h	2011-02-26 21:17:54.580716604 +0100
+@@ -26,6 +26,7 @@
+ #include "xfburn-global.h"
+ 
+ #include <gtk/gtk.h>
++#include <libxfce4ui/libxfce4ui.h>
+ 
+ G_BEGIN_DECLS
+ 
 diff -ur xfburn-0.4.3/xfburn/xfburn-burn-audio-cd-composition-dialog.c xfburn-0.4.3-4ui/xfburn/xfburn-burn-audio-cd-composition-dialog.c
 --- xfburn-0.4.3/xfburn/xfburn-burn-audio-cd-composition-dialog.c	2009-10-30 02:10:13.000000000 +0100
 +++ xfburn-0.4.3-4ui/xfburn/xfburn-burn-audio-cd-composition-dialog.c	2011-02-26 20:14:58.426013553 +0100
@@ -733,11 +743,12 @@ diff -ur xfburn-0.4.3/xfburn/xfburn-main-window.c xfburn-0.4.3-4ui/xfburn/xfburn
 diff -ur xfburn-0.4.3/xfburn/xfburn-perform-burn.h xfburn-0.4.3-4ui/xfburn/xfburn-perform-burn.h
 --- xfburn-0.4.3/xfburn/xfburn-perform-burn.h	2009-10-30 02:07:24.000000000 +0100
 +++ xfburn-0.4.3-4ui/xfburn/xfburn-perform-burn.h	2011-02-26 16:21:06.901320585 +0100
-@@ -25,7 +25,6 @@
+@@ -25,7 +25,7 @@
  #endif
  
  #include <gtk/gtk.h>
 -#include <libxfcegui4/libxfcegui4.h>
++#include <libxfce4ui/libxfce4ui.h>
  
  #include <libburn.h>
  
