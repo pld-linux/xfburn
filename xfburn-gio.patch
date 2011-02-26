@@ -43,7 +43,7 @@ diff -urN xfburn-0.4.3/config.h.in xfburn-0.4.3-gio/config.h.in
  #undef HAVE_UNISTD_H
  
 diff -urN xfburn-0.4.3/configure.in xfburn-0.4.3-gio/configure.in
---- xfburn-0.4.3/configure.in	2011-02-26 14:00:58.199792241 +0100
+--- xfburn-0.4.3/configure.in	2011-02-26 20:28:16.058013554 +0100
 +++ xfburn-0.4.3-gio/configure.in	2011-02-26 14:00:33.391792242 +0100
 @@ -40,45 +40,13 @@
  XDT_CHECK_PACKAGE([GTK], [gtk+-2.0], [2.10.0])
@@ -97,7 +97,7 @@ diff -urN xfburn-0.4.3/configure.in xfburn-0.4.3-gio/configure.in
  dnl *** Optional support for gstreamer ***
 diff -urN xfburn-0.4.3/xfburn/Makefile.am xfburn-0.4.3-gio/xfburn/Makefile.am
 --- xfburn-0.4.3/xfburn/Makefile.am	2009-10-24 23:18:10.000000000 +0200
-+++ xfburn-0.4.3-gio/xfburn/Makefile.am	2011-02-25 12:34:36.692567046 +0100
++++ xfburn-0.4.3-gio/xfburn/Makefile.am	2011-02-26 20:30:48.595013531 +0100
 @@ -28,7 +28,7 @@
  	xfburn-composition.h						\
  	xfburn-compositions-notebook.h					\
@@ -116,7 +116,29 @@ diff -urN xfburn-0.4.3/xfburn/Makefile.am xfburn-0.4.3-gio/xfburn/Makefile.am
  	xfburn-device-box.c						\
  	xfburn-device.c							\
  	xfburn-device-list.c						\
-@@ -112,13 +112,12 @@
+@@ -97,7 +97,11 @@
+ 	$(LIBISOFS_CFLAGS)						\
+ 	$(LIBXFCEGUI4_CFLAGS)						\
+ 	$(EXO_CFLAGS)							\
+-	$(THUNAR_VFS_CFLAGS)						\
++	$(GIO_CFLAGS)							\
++	$(GIO_UNIX_CFLAGS)						\
++	$(GLIB_CFLAGS)							\
++	$(GTHREAD_CFLAGS)						\
++	$(GTK_CFLAGS)							\
+ 	$(GST_CFLAGS)							\
+ 	$(GST_PBUTILS_CFLAGS)
+ 
+@@ -108,17 +112,20 @@
+ 	$(LIBISOFS_LIBS)						\
+ 	$(LIBXFCEGUI4_LIBS)						\
+ 	$(EXO_LIBS)							\
+-	$(THUNAR_VFS_LIBS)						\
++	$(GIO_LIBS)							\
++	$(GIO_UNIX_LIBS)						\
++	$(GLIB_LIBS)							\
++	$(GTHREAD_LIBS)							\
++	$(GTK_LIBS)							\
  	$(GST_LIBS)							\
  	$(GST_PBUTILS_LIBS)
  
