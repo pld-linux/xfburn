@@ -2,7 +2,7 @@ Summary:	Xfburn - a simple CD/DVD burning tool
 Summary(pl.UTF-8):	Xfburn - proste narzędzie do wypalania CD/DVD
 Name:		xfburn
 Version:	0.4.3
-Release:	3.1
+Release:	3.2
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	http://archive.xfce.org/src/apps/xfburn/0.4/%{name}-%{version}.tar.bz2
@@ -10,16 +10,14 @@ Source0:	http://archive.xfce.org/src/apps/xfburn/0.4/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-po.patch
 Patch1:		%{name}-gio.patch
 URL:		http://goodies.xfce.org/projects/applications/xfburn/
-BuildRequires:	Thunar-devel >= 0.9.3
+BuildRequires:	Thunar-devel >= 1.2.0
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	dbus-glib-devel >= 0.34
-BuildRequires:	exo-devel >= 0.3.0
+BuildRequires:	exo-devel >= 0.6.0
 BuildRequires:	gettext-devel
-BuildRequires:	glib2-devel >= 1:2.6.0
+BuildRequires:	glib2-devel >= 1:2.22.0
 BuildRequires:	gstreamer-plugins-base-devel >= 0.10.2
 BuildRequires:	gtk+2-devel >= 2:2.10.0
-BuildRequires:	hal-devel >= 0.5.7
 BuildRequires:	intltool
 BuildRequires:	libburn-devel >= 0.5.6
 BuildRequires:	libisofs-devel >= 0.6.2
@@ -27,10 +25,10 @@ BuildRequires:	libtool
 BuildRequires:	libxfcegui4-devel >= 4.4.0
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.601
+BuildRequires:	udev-glib-devel
 Requires(post,postun):	desktop-file-utils
-Requires:	Thunar >= 0.9.3
+Requires:	Thunar >= 1.2.0
 Requires:	gtk-update-icon-cache
-Requires:	hal >= 0.5.7
 Requires:	hicolor-icon-theme
 Suggests:	dvd+rw-tools
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
