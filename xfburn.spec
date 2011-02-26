@@ -23,7 +23,7 @@ BuildRequires:	intltool
 BuildRequires:	libburn-devel >= 0.5.6
 BuildRequires:	libisofs-devel >= 0.6.2
 BuildRequires:	libtool
-BuildRequires:	libxfcegui4-devel >= 4.4.0
+BuildRequires:	libxfce4ui-devel >= 4.8.0
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.601
 BuildRequires:	udev-glib-devel
