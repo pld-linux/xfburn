@@ -10,6 +10,7 @@ Source0:	http://archive.xfce.org/src/apps/xfburn/0.4/%{name}-%{version}.tar.bz2
 Patch0:		%{name}-po.patch
 Patch1:		%{name}-gio.patch
 Patch2:		%{name}-ui.patch
+Patch3:		glib-2.32.patch
 URL:		http://goodies.xfce.org/projects/applications/xfburn/
 BuildRequires:	Thunar-devel >= 1.2.0
 BuildRequires:	autoconf
@@ -53,6 +54,7 @@ obsługa płyt audio CD zostanie dodana w kolejnej wersji.
 %patch0 -p1
 %patch1 -p1
 %patch2 -p1
+%patch3 -p1
 
 # unsupported Urdu Pakistan dialect
 %{__rm} po/ur_PK.po
