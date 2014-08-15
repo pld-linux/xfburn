@@ -5,8 +5,8 @@ diff -burNp xfburn-0.4.3/configure xfburn-0.4.3-dud/configure
  
  
  
--    ALL_LINGUAS="ar ast ca cs da de dz el en_GB es et eu fi fr gl he hu id it ja kk ko lt lv nb nl pa pl pt_BR pt ru sq sv tr uk ur_PK ur zh_CN zh_TW "
-+    ALL_LINGUAS="ar ast ca cs da de dz el en_GB es et eu fi fr gl he hu id it ja kk ko lt lv nb nl pa pl pt_BR pt ru sq sv tr uk ur zh_CN zh_TW "
+-    ALL_LINGUAS="ar ast bg ca cs da de el en_AU en_GB en es et eu fi fr gl he hr hu id is it ja kk ko lt lv nb nl nn oc pa pl pt_BR pt ru si sk sq sr sv th tr ug uk ur_PK ur vi zh_CN zh_TW "
++    ALL_LINGUAS="ar ast bg ca cs da de el en_AU en_GB en es et eu fi fr gl he hr hu id is it ja kk ko lt lv nb nl nn oc pa pl pt_BR pt ru si sk sq sr sv th tr ug uk ur vi zh_CN zh_TW "
  
     for ac_header in locale.h
  do :
@@ -17,8 +17,8 @@ diff -burNp xfburn-0.4.3/configure.in xfburn-0.4.3-dud/configure.in
  AC_SYS_LARGEFILE
  
  dnl check for i18n support
--XDT_I18N([ar ast ca cs da de dz el en_GB es et eu fi fr gl he hu id it ja kk ko lt lv nb nl pa pl pt_BR pt ru sq sv tr uk ur_PK ur zh_CN zh_TW ])
-+XDT_I18N([ar ast ca cs da de dz el en_GB es et eu fi fr gl he hu id it ja kk ko lt lv nb nl pa pl pt_BR pt ru sq sv tr uk ur zh_CN zh_TW ])
+-XDT_I18N([ar ast bg ca cs da de el en_AU en_GB en es et eu fi fr gl he hr hu id is it ja kk ko lt lv nb nl nn oc pa pl pt_BR pt ru si sk sq sr sv th tr ug uk ur_PK ur vi zh_CN zh_TW ])
++XDT_I18N([ar ast bg ca cs da de el en_AU en_GB en es et eu fi fr gl he hr hu id is it ja kk ko lt lv nb nl nn oc pa pl pt_BR pt ru si sk sq sr sv th tr ug uk ur vi zh_CN zh_TW ])
  
  dnl check for required packages
  XDT_CHECK_PACKAGE([LIBBURN], [libburn-1], [0.4.2])

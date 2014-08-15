@@ -1,18 +1,18 @@
 Summary:	Xfburn - a simple CD/DVD burning tool
 Summary(pl.UTF-8):	Xfburn - proste narzędzie do wypalania CD/DVD
 Name:		xfburn
-Version:	0.4.3
-Release:	5
+Version:	0.5.2
+Release:	1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://archive.xfce.org/src/apps/xfburn/0.4/%{name}-%{version}.tar.bz2
-# Source0-md5:	147cdc2d909e751125be16103b8dc81f
+Source0:	http://archive.xfce.org/src/apps/xfburn/0.5/%{name}-%{version}.tar.bz2
+# Source0-md5:	5a277c76ec9f70900b8b98a2cd500a1d
 Patch0:		%{name}-po.patch
 Patch1:		%{name}-gio.patch
 Patch2:		%{name}-ui.patch
 Patch3:		glib-2.32.patch
 URL:		http://goodies.xfce.org/projects/applications/xfburn/
-BuildRequires:	Thunar-devel >= 1.2.0
+BuildRequires:	Thunar-devel >= 1.6.0
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	exo-devel >= 0.6.0
@@ -24,12 +24,12 @@ BuildRequires:	intltool
 BuildRequires:	libburn-devel >= 0.5.6
 BuildRequires:	libisofs-devel >= 0.6.2
 BuildRequires:	libtool
-BuildRequires:	libxfce4ui-devel >= 4.8.0
+BuildRequires:	libxfce4ui-devel >= 4.10.0
 BuildRequires:	pkgconfig
 BuildRequires:	rpmbuild(macros) >= 1.601
 BuildRequires:	udev-glib-devel
 Requires(post,postun):	desktop-file-utils
-Requires:	Thunar >= 1.2.0
+Requires:	Thunar >= 1.6.0
 Requires:	gtk-update-icon-cache
 Requires:	hicolor-icon-theme
 Suggests:	dvd+rw-tools
@@ -52,9 +52,9 @@ obsługa płyt audio CD zostanie dodana w kolejnej wersji.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
-%patch2 -p1
-%patch3 -p1
+#%patch1 -p1
+#%patch2 -p1
+#%patch3 -p1
 
 # unsupported Urdu Pakistan dialect
 %{__rm} po/ur_PK.po
