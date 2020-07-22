@@ -1,10 +1,10 @@
---- xfburn-0.4.3/configure.ac	2010-02-13 07:43:05.000000000 +0100
-+++ xfburn-0.4.3-dud/configure.ac	2010-02-21 19:34:11.173231576 +0100
-@@ -31,7 +31,7 @@ AC_PROG_INTLTOOL([0.31], [no-xml])
+--- 1/configure.ac	2020-07-11 20:36:50.975602544 +0000
++++ 2/configure.ac	2020-07-11 20:40:09.181110165 +0000
+@@ -33,7 +33,7 @@
  AC_SYS_LARGEFILE
  
  dnl check for i18n support
--XDT_I18N([ar ast bg ca cs da de el en_AU en_GB en es et eu fi fr gl he hr hu id is it ja kk ko lt lv ms nb nl nn oc pa pl pt_BR pt ru si sk sq sr sv te th tr ug uk ur_PK ur vi zh_CN zh_TW ])
+-XDT_I18N([ar ast be bg ca cs da de el en_AU en_GB en es et eu fi fr gl he hr hu hy_AM id ie is it ja kk ko lt lv ms nb nl nn oc pa pl pt_BR pt ru si sk sl sq sr sv te th tr ug uk ur_PK ur vi zh_CN zh_TW ])
 +XDT_I18N([ar ast bg ca cs da de el en_AU en_GB en es et eu fi fr gl he hr hu id is it ja kk ko lt lv ms nb nl nn oc pa pl pt_BR pt ru si sk sq sr sv te th tr ug uk ur vi zh_CN zh_TW ])
  
  dnl check for required packages
