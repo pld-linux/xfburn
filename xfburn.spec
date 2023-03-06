@@ -1,22 +1,21 @@
 Summary:	Xfburn - a simple CD/DVD burning tool
 Summary(pl.UTF-8):	Xfburn - proste narzędzie do wypalania CD/DVD
 Name:		xfburn
-Version:	0.6.2
+Version:	0.7.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	http://archive.xfce.org/src/apps/xfburn/0.6/%{name}-%{version}.tar.bz2
-# Source0-md5:	f4666de100f62fac070b5840e8b98014
-Patch0:		%{name}-po.patch
-URL:		http://goodies.xfce.org/projects/applications/xfburn/
+Source0:	https://archive.xfce.org/src/apps/xfburn/0.7/%{name}-%{version}.tar.bz2
+# Source0-md5:	38d1e73e53c0fc4bb1bd286df1d91839
+URL:		https://goodies.xfce.org/projects/applications/xfburn/
 BuildRequires:	Thunar-devel >= 1.6.6
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	exo-devel >= 0.6.0
+BuildRequires:	exo-devel >= 0.11.0
 BuildRequires:	gettext-tools
-BuildRequires:	glib2-devel >= 1:2.22.0
+BuildRequires:	glib2-devel >= 1:2.38.0
 BuildRequires:	gstreamer-plugins-base-devel >= 0.10.2
-BuildRequires:	gtk+2-devel >= 2:2.10.0
+BuildRequires:	gtk+3-devel >= 3.20.0
 BuildRequires:	intltool
 BuildRequires:	libburn-devel >= 0.5.6
 BuildRequires:	libisofs-devel >= 0.6.2
@@ -48,7 +47,6 @@ obsługa płyt audio CD zostanie dodana w kolejnej wersji.
 
 %prep
 %setup -q
-%patch0 -p1
 
 # unsupported Urdu Pakistan dialect
 %{__rm} po/ur_PK.po
@@ -69,6 +67,9 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+# not supported
+%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/{hy_AM,hye,ie}
+
 %find_lang %{name}
 
 %clean
@@ -84,7 +85,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{name}.lang
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog NEWS README TODO
+%doc AUTHORS ChangeLog NEWS README.md TODO
 %attr(755,root,root) %{_bindir}/%{name}
 %{_iconsdir}/hicolor/*/stock/media/*.png
 %{_iconsdir}/hicolor/*/stock/media/*.svg
