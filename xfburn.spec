@@ -1,12 +1,12 @@
 Summary:	Xfburn - a simple CD/DVD burning tool
 Summary(pl.UTF-8):	Xfburn - proste narzędzie do wypalania CD/DVD
 Name:		xfburn
-Version:	0.7.0
+Version:	0.7.1
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
 Source0:	https://archive.xfce.org/src/apps/xfburn/0.7/%{name}-%{version}.tar.bz2
-# Source0-md5:	38d1e73e53c0fc4bb1bd286df1d91839
+# Source0-md5:	ae8b476335b45debdfac8a7e293789b9
 URL:		https://goodies.xfce.org/projects/applications/xfburn/
 BuildRequires:	Thunar-devel >= 1.6.6
 BuildRequires:	autoconf
@@ -48,9 +48,6 @@ obsługa płyt audio CD zostanie dodana w kolejnej wersji.
 %prep
 %setup -q
 
-# unsupported Urdu Pakistan dialect
-%{__rm} po/ur_PK.po
-
 %build
 %{__libtoolize}
 %{__aclocal}
@@ -68,7 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 	DESTDIR=$RPM_BUILD_ROOT
 
 # not supported
-%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/{hy_AM,hye,ie}
+%{__rm} -r $RPM_BUILD_ROOT%{_localedir}/{hy_AM,hye,ie,ur_PK}
 
 %find_lang %{name}
 
