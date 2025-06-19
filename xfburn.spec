@@ -1,29 +1,27 @@
 Summary:	Xfburn - a simple CD/DVD burning tool
 Summary(pl.UTF-8):	Xfburn - proste narzędzie do wypalania CD/DVD
 Name:		xfburn
-Version:	0.7.2
+Version:	0.8.0
 Release:	1
 License:	GPL v2+
 Group:		X11/Applications
-Source0:	https://archive.xfce.org/src/apps/xfburn/0.7/%{name}-%{version}.tar.bz2
-# Source0-md5:	a895d4d02cf2ee794162815c3f531a42
+Source0:	https://archive.xfce.org/src/apps/xfburn/0.8/%{name}-%{version}.tar.bz2
+# Source0-md5:	0ae5e3e94c71857b7cd8555f9f18625f
 URL:		https://goodies.xfce.org/projects/applications/xfburn/
 BuildRequires:	Thunar-devel >= 1.6.6
-BuildRequires:	autoconf
-BuildRequires:	automake
 BuildRequires:	exo-devel >= 0.11.0
 BuildRequires:	gettext-tools
-BuildRequires:	glib2-devel >= 1:2.38.0
-BuildRequires:	gstreamer-plugins-base-devel >= 0.10.2
-BuildRequires:	gtk+3-devel >= 3.20.0
-BuildRequires:	intltool
+BuildRequires:	glib2-devel >= 1:2.66.0
+BuildRequires:	gstreamer-plugins-base-devel >= 1.0.0
+BuildRequires:	gtk+3-devel >= 3.24.0
 BuildRequires:	libburn-devel >= 0.5.6
 BuildRequires:	libisofs-devel >= 0.6.2
-BuildRequires:	libtool
-BuildRequires:	libxfce4ui-devel >= 4.12.0
+BuildRequires:	libxfce4ui-devel >= 4.18.0
+BuildRequires:	meson >= 0.56.0
+BuildRequires:	ninja >= 1.5
 BuildRequires:	pkgconfig
-BuildRequires:	rpmbuild(macros) >= 1.601
-BuildRequires:	udev-glib-devel
+BuildRequires:	rpmbuild(macros) >= 2.042
+BuildRequires:	udev-glib-devel >= 145
 Requires(post,postun):	desktop-file-utils
 Requires:	Thunar >= 1.6.6
 Requires:	gtk-update-icon-cache
@@ -49,20 +47,13 @@ obsługa płyt audio CD zostanie dodana w kolejnej wersji.
 %setup -q
 
 %build
-%{__libtoolize}
-%{__aclocal}
-%{__autoconf}
-%{__autoheader}
-%{__automake}
-%configure
-
-%{__make}
+%meson
+%meson_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT
+%meson_install
 
 # not supported
 %{__rm} -r $RPM_BUILD_ROOT%{_localedir}/{hy_AM,hye,ie,ur_PK}
